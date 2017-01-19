@@ -1,0 +1,33 @@
+
+public class Test {
+	/*public-anyone
+	 * protected-friends and family(same project)
+	 * no indentifier int v3(only package access)
+	 *private no one but parent class 
+	 */
+	public static void displayArea(Circle shape)
+	{	if(shape==null)
+		{System.out.println("Shape was not created.");
+	return;}
+		if(shape instanceof Circle)//if it is a circle or subclass of Circle
+		System.out.printf("Area is %.2f%n",shape.getArea());
+	else{
+		System.out.println("Shape is not of type circle");
+	}
+	}
+	public static void main(String[] args) 
+	{
+		Circle c1=new Circle();
+		Circle c2=new Circle(5.0);
+		Circle c5=new Cylinder();
+		displayArea(c1);
+		displayArea(c2);
+		Cylinder c3=new Cylinder();
+		Cylinder c4=new Cylinder(5.0,10.0);
+		System.out.println(c3);
+		displayArea(c3);
+		System.out.println(c4);
+		displayArea(c4);
+	}
+
+}
